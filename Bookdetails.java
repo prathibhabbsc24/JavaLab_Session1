@@ -1,30 +1,30 @@
-class Book
-{
-	public String bname, bookno, author, genre;
-	public int compartment;
-	
-	public Book(String bname, String bookno, String author, String genre, int compartment)
-	{
-		this.bname=bname;
-		this.bookno=bookno;
-		this.author=author;
-		this.genre=genre;
-		this.compartment=compartment;
-	}
-	public void display()
-	{
-		System.out.println("Name of the book is: " + bname);
-		System.out.println("With number: " + bookno);
-		System.out.println("Written By: " + author);
-		System.out.println("Genre of the book is: " + genre);
-		System.out.println("Compartment No.: " + compartment);
-	}
-}
-public class Bookdetails
-{
-	public static void main(String args[])
-	{
-		Book std = new Book("Pride and Prejudice", "1BK9273", "Jane Austen", "Fiction", 234);
-		std.display();
-	}
+class Book {
+    public String title;
+    public String author;
+    public int year;
+
+    
+    public Book(String title, String author, int year) {
+        this.title = title;   
+        this.author = author; 
+        this.year = year;         }
+
+    // display book details
+    public void displayDetails() {
+        System.out.println("Book Details:");
+        System.out.println("Title : " + this.title);
+        System.out.println("Author: " + this.author);
+        System.out.println("Year  : " + this.year);
+    }
+
+    // Main method to test the Book class
+    public static void main(String[] args) {
+      
+        Book book1 = new Book("Malgudi days", "R.K Narayan", 1943);
+        
+  	// Display details of each book
+        book1.displayDetails();
+        System.out.println();
+        
+      }
 }
